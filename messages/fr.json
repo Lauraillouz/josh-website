@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "siteName": "Josh Studio",
+    "siteDescription": "Ingénierie du son professionnelle — séances studio, mixage, mastering et salle de répétition à Paris.",
+    "tagline": "Enregistrement · Mixage · Mastering · Cours"
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "equipment": "Matériel",
+    "rehearsal": "Répétition",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "common": {
+    "bookSession": "Prendre rdv",
+    "rentEquipment": "Louer du matériel",
+    "bookRehearsal": "Réserver une salle",
+    "bookRehearsalSpace": "Réserver une salle de répétition",
+    "learnMore": "En savoir plus →",
+    "showLess": "Réduire ↑",
+    "browseGear": "Voir le matériel & envoyer une demande →",
+    "viewAllServices": "Voir tous les services →",
+    "goToServices": "Voir les services →",
+    "contact": "Contact",
+    "links": "Liens",
+    "rightsReserved": "Tous droits réservés.",
+    "toggleMenu": "Ouvrir le menu",
+    "language": "Langue",
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "localeEn": "Anglais",
+    "localeFr": "Français"
+  },
+  "hero": {
+    "eyebrow": "Studio d'ingénierie du son"
+  },
+  "home": {
+    "servicesTitle": "Services",
+    "servicesSubtitle": "Séances studio, post-production, cours et location de matériel.",
+    "whyTitle": "Pourquoi travailler avec moi",
+    "whyText": "Workflow hybride analogique/numérique, délais rapides et une attention particulière pour que votre musique sonne bien — en studio et sur tous les systèmes d'écoute.",
+    "portfolioTitle": "Portfolio",
+    "portfolioText": "Crédits et extraits audio — Phase 2.",
+    "ctaTitle": "Prêt à réserver ?",
+    "ctaText": "Séance studio, salle de répétition ou location de matériel — choisissez votre parcours."
+  },
+  "services": {
+    "title": "Services",
+    "description": "De la prise de son au master final — réservez du temps studio ou parcourez le matériel à louer.",
+    "metaDescription": "Enregistrement, mixage, mastering, cours, coaching production et location de matériel.",
+    "recording": {
+      "title": "Enregistrement",
+      "description": "Capturez votre son dans un studio traité avec des micros et préamplis professionnels.",
+      "duration": "À partir de 2 h",
+      "details": [
+        "Séances solo ou groupe dans une live room traitée acoustiquement, avec un choix de micros et préamplis de qualité.",
+        "Réglage des niveaux, prises multiples et sélection des meilleures performances — vous repartez avec des multitracks organisés, prêts pour le mix.",
+        "Idéal pour voix, instruments acoustiques, groupes et overdubs. Séances à partir de 2 h ; journées complètes possibles."
+      ]
+    },
+    "mixing": {
+      "title": "Mixage",
+      "description": "Équilibre, profondeur et clarté — des mixes qui sonnent partout.",
+      "duration": "Par morceau",
+      "details": [
+        "Mixage stems ou multitracks : EQ, compression, effets spatiaux et automation adaptés à votre style.",
+        "Workflow hybride analogique/numérique pour chaleur et précision. Deux allers-retours inclus ; supplémentaires sur demande.",
+        "Livraison WAV/AIFF ; versions instrumentale et acapella en option. Délai typique : 3 à 7 jours par morceau."
+      ]
+    },
+    "mastering": {
+      "title": "Mastering",
+      "description": "Finition finale pour streaming, vinyle et diffusion broadcast.",
+      "duration": "Par titre / EP",
+      "details": [
+        "EQ finale, dynamique et optimisation du niveau pour Spotify, Apple Music, CD ou pré-master vinyle.",
+        "Cohérence sonore sur un EP ou album, avec enchaînement et espacement soignés entre les titres.",
+        "Une série de retours incluse et exports par format (streaming, CD, pré-master vinyle)."
+      ]
+    },
+    "lessons": {
+      "title": "Cours",
+      "description": "Accompagnement individuel en enregistrement, mixage et production.",
+      "duration": "1–2 h",
+      "details": [
+        "Séances pratiques en studio ou à distance — placement de micros, gain staging, workflow DAW et choix de mix.",
+        "Adapté à votre niveau : débutants ou producteurs expérimentés qui veulent affiner leur son.",
+        "Apportez vos projets pour un retour, ou travaillez sur le matériel du studio. Séances de 1 à 2 h."
+      ]
+    },
+    "production": {
+      "title": "Coaching production",
+      "description": "Conseils sur l'arrangement, le sound design et la finalisation de vos morceaux.",
+      "duration": "Flexible",
+      "details": [
+        "Direction créative sur la structure, l'instrumentation et l'identité sonore — de la démo au produit fini.",
+        "Retour sur vos travaux en cours : arrangement, sound design, production vocale et comment bien finir.",
+        "Format flexible — séance approfondie ponctuelle ou suivi régulier selon l'avancement du projet."
+      ]
+    },
+    "equipment": {
+      "title": "Location de matériel",
+      "description": "Parcourez micros, interfaces et outboard disponibles — sélectionnez et envoyez une demande.",
+      "details": [
+        "Location de micros, interfaces, compresseurs outboard, monitors et accessoires à la journée ou à la semaine.",
+        "Choisissez le matériel dans notre inventaire, ajoutez vos coordonnées et envoyez une demande — nous confirmons disponibilité et tarifs.",
+        "Retrait au studio ou livraison locale sur demande. Idéal pour home studio, concerts ou compléter votre setup."
+      ]
+    }
+  },
+  "equipment": {
+    "title": "Location de matériel",
+    "intro": "Sélectionnez un ou plusieurs articles ci-dessous, puis envoyez un e-mail pour vérifier disponibilité et tarifs.",
+    "metaDescription": "Parcourez le matériel studio disponible à la location — sélectionnez et envoyez une demande par e-mail.",
+    "clearSelection": "Effacer la sélection",
+    "itemsSelected": "{count} article sélectionné",
+    "itemsSelectedPlural": "{count} articles sélectionnés",
+    "yourDetails": "Vos coordonnées",
+    "yourDetailsHint": "Obligatoires pour envoyer votre demande — incluses dans l'e-mail pour que nous puissions vous répondre.",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "vous@exemple.com",
+    "phone": "Téléphone",
+    "phonePlaceholder": "+33 6 00 00 00 00",
+    "notes": "Détails supplémentaires (optionnel)",
+    "notesPlaceholder": "Dates, type de projet, retrait ou livraison…",
+    "sendEnquiry": "Envoyer la demande par e-mail",
+    "selectToEnquire": "Sélectionnez du matériel",
+    "fillDetailsToSend": "Renseignez vos coordonnées pour envoyer",
+    "sendHint": "Ouvre votre application e-mail avec vos coordonnées et la liste du matériel sélectionné — envoyé à {email}.",
+    "categories": {
+      "microphones": "Microphones",
+      "interfaces": "Interfaces",
+      "outboard": "Outboard",
+      "monitors": "Moniteurs",
+      "accessories": "Accessoires"
+    },
+    "itemNotes": {
+      "u87": "Favori studio",
+      "beta52": "Grosse caisse",
+      "1176": "Compresseur",
+      "la2a": "Compresseur optique"
+    },
+    "itemNames": {
+      "genelec-8030": "Paire Genelec 8030",
+      "mic-stands": "Pieds de micro (×4)",
+      "xlr-cables": "Lot de câbles XLR",
+      "di-boxes": "Boîtes DI (×2)"
+    },
+    "mailto": {
+      "subject": "Demande de location — {name}",
+      "greeting": "Bonjour,",
+      "intro": "Je souhaite me renseigner sur la location du matériel suivant :",
+      "myDetails": "Mes coordonnées :",
+      "nameLabel": "Nom :",
+      "emailLabel": "E-mail :",
+      "phoneLabel": "Téléphone :",
+      "datesNeeded": "Dates souhaitées :",
+      "additionalDetails": "Détails supplémentaires :",
+      "thankYou": "Merci,"
+    }
+  },
+  "rehearsal": {
+    "title": "Salle de répétition",
+    "description": "Une salle de répétition pour groupes et artistes solo. Photos — Phase 2.",
+    "metaDescription": "Réservez la salle de répétition — sono, amplis et batterie inclus.",
+    "specs": "Caractéristiques",
+    "capacity": "Capacité :",
+    "equipment": "Équipement :",
+    "rate": "Tarif :",
+    "capacityValue": "Jusqu'à 6 musiciens",
+    "equipmentValue": "Sono, batterie, ampli basse, ampli guitare, micros",
+    "rateValue": "25 € / heure",
+    "houseRules": "Règlement",
+    "rules": [
+      "Respecter le voisinage — pas de volume excessif après 22 h",
+      "Laisser la salle propre et les câbles rangés",
+      "Interdiction de fumer dans le bâtiment"
+    ]
+  },
+  "about": {
+    "title": "À propos",
+    "metaDescription": "En savoir plus sur Josh Studio — expérience, matériel et crédits.",
+    "bio": [
+      "Josh est ingénieur du son avec plus de 10 ans d'expérience en enregistrement, mixage et mastering pour artistes, labels et producteurs indépendants.",
+      "Son studio allie chaleur analogique et workflow hybride moderne — des délais rapides sans sacrifier le détail.",
+      "Que vous enregistriez un groupe ou finalisiez un single, l'objectif est le même : que votre musique sonne comme vous, au mieux."
+    ],
+    "creditsTitle": "Crédits sélectionnés",
+    "creditsNote": "Portfolio complet et matériel — Phase 2.",
+    "credits": ["Artiste A", "Label B", "Projet C", "Album D"]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Questions, devis ou projets sur mesure — envoyez un message ou réservez directement.",
+    "metaDescription": "Contactez-nous ou réservez une séance studio et la salle de répétition.",
+    "address": "Paris, France",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "getInTouch": "Nous contacter",
+    "bookStudioTitle": "Réserver du temps studio",
+    "bookStudioText": "Enregistrement, mixage, mastering, cours.",
+    "formNotice": "Envoi du formulaire — Phase 3. Champs provisoires pour l'instant.",
+    "serviceInterest": "Service concerné",
+    "message": "Message",
+    "messagePlaceholder": "Parlez-nous de votre projet…",
+    "sendMessage": "Envoyer le message",
+    "serviceOptions": {
+      "recording": "Enregistrement",
+      "mixing": "Mixage",
+      "mastering": "Mastering",
+      "lessons": "Cours",
+      "rehearsal": "Salle de répétition",
+      "equipment": "Location de matériel",
+      "other": "Autre"
+    }
+  },
+  "booking": {
+    "engineerLabel": "Réserver du temps studio avec Josh",
+    "rehearsalLabel": "Réserver la salle de répétition",
+    "confirmation": "Vous recevrez une confirmation par e-mail après la réservation.",
+    "placeholder": "Intégration Google Calendar ici (Phase 3).",
+    "openBooking": "Ouvrir la page de réservation"
+  }
+}

@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import type { Service } from "@/lib/site-config";
+import { useLocale } from "@/components/LocaleProvider";
+import type { ServiceContent } from "@/lib/content";
 
 type ServiceCardProps = {
-  service: Service;
+  service: ServiceContent;
 };
 
 export function ServiceCard({ service }: ServiceCardProps) {
+  const { dict } = useLocale();
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -39,7 +41,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
               href={service.href}
               className="inline-block text-sm font-medium text-accent hover:text-accent-hover"
             >
-              Browse gear & send enquiry →
+              {dict.common.browseGear}
             </Link>
           )}
         </div>
@@ -51,7 +53,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         aria-expanded={expanded}
         className="mt-6 self-start text-left text-sm font-medium text-accent hover:text-accent-hover"
       >
-        {expanded ? "Show less ↑" : "Learn more →"}
+        {expanded ? dict.common.showLess : dict.common.learnMore}
       </button>
     </article>
   );

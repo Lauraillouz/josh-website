@@ -1,12 +1,18 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { EquipmentItem } from "@/lib/site-config";
-import { siteConfig } from "@/lib/site-config";
+import { useLocale } from "@/components/LocaleProvider";
+import {
+  formatItemsSelected,
+  formatSendHint,
+  getEquipmentItems,
+  type EquipmentItemContent,
+} from "@/lib/content";
 import { buildEquipmentEnquiryMailto } from "@/lib/equipment-mailto";
+import { siteData } from "@/lib/site-data";
 
-function groupByCategory(items: EquipmentItem[]) {
-  const groups = new Map<string, EquipmentItem[]>();
+function groupByCategory(items: EquipmentItemContent[]) {
+  const groups = new Map<string, EquipmentItemContent[]>();
 
   for (const item of items) {
     const list = groups.get(item.category) ?? [];
@@ -32,19 +38,17 @@ function canSendEnquiry(
 }
 
 export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boolean }) {
-  const { equipmentRental } = siteConfig;
+  const { dict } = useLocale();
+  const equipmentItems = useMemo(() => getEquipmentItems(dict), [dict]);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [notes, setNotes] = useState("");
 
-  const grouped = useMemo(
-    () => groupByCategory([...equipmentRental.items]),
-    [equipmentRental.items],
-  );
+  const grouped = useMemo(() => groupByCategory(equipmentItems), [equipmentItems]);
 
-  const selectedNames = equipmentRental.items
+  const selectedNames = equipmentItems
     .filter((item) => selected.has(item.id))
     .map((item) => item.name);
 
@@ -68,6 +72,7 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
         { name, email, phone },
         selectedNames,
         notes,
+        dict.equipment.mailto,
       )
     : undefined;
 
@@ -75,8 +80,8 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
     <div className="rounded-xl border border-border bg-surface-raised p-6 sm:p-8">
       {!hideHeader && (
         <>
-          <h2 className="text-xl font-semibold">{equipmentRental.title}</h2>
-          <p className="mt-2 text-sm text-muted">{equipmentRental.intro}</p>
+          <h2 className="text-xl font-semibold">{dict.equipment.title}</h2>
+          <p className="mt-2 text-sm text-muted">{dict.equipment.intro}</p>
         </>
       )}
 
@@ -86,11 +91,11 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
           onClick={clearAll}
           className="text-sm text-muted hover:text-foreground"
         >
-          Clear selection
+          {dict.equipment.clearSelection}
         </button>
         {selected.size > 0 && (
           <span className="text-sm text-muted">
-            {selected.size} item{selected.size === 1 ? "" : "s"} selected
+            {formatItemsSelected(dict, selected.size)}
           </span>
         )}
       </div>
@@ -137,15 +142,13 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
       </div>
 
       <div className="mt-8 space-y-4 border-t border-border pt-8">
-        <h3 className="text-sm font-medium">Your details</h3>
-        <p className="text-sm text-muted">
-          Required to send your enquiry — included in the email so we can reply.
-        </p>
+        <h3 className="text-sm font-medium">{dict.equipment.yourDetails}</h3>
+        <p className="text-sm text-muted">{dict.equipment.yourDetailsHint}</p>
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="sm:col-span-2">
             <label htmlFor="equipment-name" className="block text-sm font-medium">
-              Name
+              {dict.equipment.name}
             </label>
             <input
               id="equipment-name"
@@ -155,12 +158,12 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
               onChange={(e) => setName(e.target.value)}
               autoComplete="name"
               className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
-              placeholder="Your name"
+              placeholder={dict.equipment.namePlaceholder}
             />
           </div>
           <div>
             <label htmlFor="equipment-email" className="block text-sm font-medium">
-              Email
+              {dict.equipment.emailLabel}
             </label>
             <input
               id="equipment-email"
@@ -170,12 +173,12 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="email"
               className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
-              placeholder="you@example.com"
+              placeholder={dict.equipment.emailPlaceholder}
             />
           </div>
           <div>
             <label htmlFor="equipment-phone" className="block text-sm font-medium">
-              Phone
+              {dict.equipment.phone}
             </label>
             <input
               id="equipment-phone"
@@ -185,14 +188,14 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
               onChange={(e) => setPhone(e.target.value)}
               autoComplete="tel"
               className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
-              placeholder="+33 6 00 00 00 00"
+              placeholder={dict.equipment.phonePlaceholder}
             />
           </div>
         </div>
 
         <div>
           <label htmlFor="equipment-notes" className="block text-sm font-medium">
-            Additional details (optional)
+            {dict.equipment.notes}
           </label>
           <textarea
             id="equipment-notes"
@@ -200,7 +203,7 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
             onChange={(e) => setNotes(e.target.value)}
             rows={3}
             className="mt-1 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
-            placeholder="Dates, project type, pickup vs delivery…"
+            placeholder={dict.equipment.notesPlaceholder}
           />
         </div>
       </div>
@@ -211,7 +214,7 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
             href={mailtoHref}
             className="inline-flex justify-center rounded-full bg-accent px-6 py-2.5 text-sm font-medium text-background transition-colors hover:bg-accent-hover"
           >
-            Send enquiry by email
+            {dict.equipment.sendEnquiry}
           </a>
         ) : (
           <button
@@ -220,13 +223,12 @@ export function EquipmentRentalPicker({ hideHeader = false }: { hideHeader?: boo
             className="inline-flex justify-center rounded-full bg-accent/40 px-6 py-2.5 text-sm font-medium text-background/70"
           >
             {selected.size === 0
-              ? "Select equipment to enquire"
-              : "Fill in your details to send"}
+              ? dict.equipment.selectToEnquire
+              : dict.equipment.fillDetailsToSend}
           </button>
         )}
         <p className="text-sm text-muted">
-          Opens your email app with your contact details and a bullet list of
-          selected gear — sent to {siteConfig.contact.email}.
+          {formatSendHint(dict, siteData.contact.email)}
         </p>
       </div>
     </div>
