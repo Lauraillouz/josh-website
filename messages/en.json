@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "siteName": "Josh Studio",
+    "siteDescription": "Professional sound engineering services — studio sessions, mixing, mastering, and rehearsal space in Paris.",
+    "tagline": "Recording · Mixing · Mastering · Lessons"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "equipment": "Equipment",
+    "rehearsal": "Rehearsal",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "common": {
+    "bookSession": "Book a session",
+    "rentEquipment": "Rent equipment",
+    "bookRehearsal": "Book rehearsal",
+    "bookRehearsalSpace": "Book rehearsal space",
+    "learnMore": "Learn more →",
+    "showLess": "Show less ↑",
+    "browseGear": "Browse gear & send enquiry →",
+    "viewAllServices": "View all services →",
+    "goToServices": "Go to services →",
+    "contact": "Contact",
+    "links": "Links",
+    "rightsReserved": "All rights reserved.",
+    "toggleMenu": "Toggle menu",
+    "language": "Language",
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "localeEn": "English",
+    "localeFr": "French"
+  },
+  "hero": {
+    "eyebrow": "Sound Engineering Studio"
+  },
+  "home": {
+    "servicesTitle": "Services",
+    "servicesSubtitle": "Studio sessions, post-production, coaching, and gear rental.",
+    "whyTitle": "Why work with me",
+    "whyText": "A hybrid analog/digital workflow, fast turnarounds, and a focus on making your music translate — in the studio and on every playback system.",
+    "portfolioTitle": "Portfolio teaser",
+    "portfolioText": "Credits and audio samples coming in Phase 2.",
+    "ctaTitle": "Ready to book?",
+    "ctaText": "Studio sessions, rehearsal space, or gear rental — pick your flow."
+  },
+  "services": {
+    "title": "Services",
+    "description": "From tracking to final master — book studio time or browse gear for rent.",
+    "metaDescription": "Recording, mixing, mastering, lessons, production coaching, and equipment rental.",
+    "recording": {
+      "title": "Recording",
+      "description": "Capture your sound in a treated studio with pro microphones and preamps.",
+      "duration": "From 2 hours",
+      "details": [
+        "Full-band or solo sessions in a acoustically treated live room with quality mic selection and preamps.",
+        "We set levels, capture multiple takes, and comp the best performances — you leave with organized multitracks ready for mix.",
+        "Ideal for vocals, acoustic instruments, bands, and overdubs. Session length from 2 hours; full-day blocks available."
+      ]
+    },
+    "mixing": {
+      "title": "Mixing",
+      "description": "Balance, depth, and clarity — mixes that translate on every system.",
+      "duration": "Per song",
+      "details": [
+        "Stem or multitrack mixing with EQ, compression, spatial effects, and automation tailored to your genre.",
+        "Hybrid analog/digital workflow for warmth and precision. Two revision rounds included; extra rounds on request.",
+        "Delivered as WAV/AIFF; optional instrumental and acapella versions. Typical turnaround 3–7 days per song."
+      ]
+    },
+    "mastering": {
+      "title": "Mastering",
+      "description": "Final polish for streaming, vinyl, and broadcast-ready loudness.",
+      "duration": "Per track / EP",
+      "details": [
+        "Final EQ, dynamics, and loudness optimization for Spotify, Apple Music, CD, or vinyl pre-master.",
+        "One cohesive sound across an EP or album with careful sequencing and spacing between tracks.",
+        "Includes one revision round and format-specific exports (streaming, CD, vinyl pre-master)."
+      ]
+    },
+    "lessons": {
+      "title": "Lessons",
+      "description": "One-on-one coaching in recording, mixing, and production workflows.",
+      "duration": "1–2 hours",
+      "details": [
+        "Hands-on sessions in the studio or remote — mic placement, gain staging, DAW workflow, and mix decisions.",
+        "Tailored to your level: beginners learning fundamentals, or experienced producers refining their sound.",
+        "Bring your own projects for feedback, or work through exercises on studio gear. 1–2 hour sessions."
+      ]
+    },
+    "production": {
+      "title": "Production Coaching",
+      "description": "Guidance on arrangement, sound design, and finishing your tracks.",
+      "duration": "Flexible",
+      "details": [
+        "Creative direction on structure, instrumentation, and sonic identity — from demo to release-ready.",
+        "Feedback on works in progress: arrangement, sound design, vocal production, and how to finish strong.",
+        "Flexible format — single deep-dive sessions or ongoing check-ins as your project develops."
+      ]
+    },
+    "equipment": {
+      "title": "Equipment Rental",
+      "description": "Browse available mics, interfaces, and outboard — select what you need and send an enquiry.",
+      "details": [
+        "Rent mics, interfaces, outboard compressors, monitors, and accessories by the day or week.",
+        "Pick the gear you need from our inventory, add your contact details, and send an enquiry — we'll confirm availability and rates.",
+        "Pickup at the studio or local delivery on request. Ideal for home sessions, live gigs, or supplementing your own setup."
+      ]
+    }
+  },
+  "equipment": {
+    "title": "Equipment rental",
+    "intro": "Select one or more items below, then send an email to check availability and rates.",
+    "metaDescription": "Browse studio gear available for rent — select items and send an enquiry by email.",
+    "clearSelection": "Clear selection",
+    "itemsSelected": "{count} item selected",
+    "itemsSelectedPlural": "{count} items selected",
+    "yourDetails": "Your details",
+    "yourDetailsHint": "Required to send your enquiry — included in the email so we can reply.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+33 6 00 00 00 00",
+    "notes": "Additional details (optional)",
+    "notesPlaceholder": "Dates, project type, pickup vs delivery…",
+    "sendEnquiry": "Send enquiry by email",
+    "selectToEnquire": "Select equipment to enquire",
+    "fillDetailsToSend": "Fill in your details to send",
+    "sendHint": "Opens your email app with your contact details and a bullet list of selected gear — sent to {email}.",
+    "categories": {
+      "microphones": "Microphones",
+      "interfaces": "Interfaces",
+      "outboard": "Outboard",
+      "monitors": "Monitors",
+      "accessories": "Accessories"
+    },
+    "itemNotes": {
+      "u87": "Studio favourite",
+      "beta52": "Kick drum",
+      "1176": "Compressor",
+      "la2a": "Optical compressor"
+    },
+    "itemNames": {
+      "genelec-8030": "Genelec 8030 pair",
+      "mic-stands": "Mic stands (×4)",
+      "xlr-cables": "XLR cable pack",
+      "di-boxes": "DI boxes (×2)"
+    },
+    "mailto": {
+      "subject": "Equipment rental enquiry — {name}",
+      "greeting": "Hello,",
+      "intro": "I would like to enquire about renting the following equipment:",
+      "myDetails": "My details:",
+      "nameLabel": "Name:",
+      "emailLabel": "Email:",
+      "phoneLabel": "Phone:",
+      "datesNeeded": "Dates needed:",
+      "additionalDetails": "Additional details:",
+      "thankYou": "Thank you,"
+    }
+  },
+  "rehearsal": {
+    "title": "Rehearsal Space",
+    "description": "A treated rehearsal room for bands and solo artists. Photos coming in Phase 2.",
+    "metaDescription": "Book the rehearsal room — PA, amps, and drums included.",
+    "specs": "Specs",
+    "capacity": "Capacity:",
+    "equipment": "Equipment:",
+    "rate": "Rate:",
+    "capacityValue": "Up to 6 musicians",
+    "equipmentValue": "PA, drum kit, bass amp, guitar amp, mics",
+    "rateValue": "€25 / hour",
+    "houseRules": "House rules",
+    "rules": [
+      "Respect neighbours — no excessive volume after 10pm",
+      "Leave the room clean and cables coiled",
+      "No smoking inside the building"
+    ]
+  },
+  "about": {
+    "title": "About",
+    "metaDescription": "Learn more about Josh Studio — experience, gear, and credits.",
+    "bio": [
+      "Josh is a sound engineer with over 10 years of experience across recording, mixing, and mastering for artists, labels, and independent producers.",
+      "His studio combines analog warmth with a modern hybrid workflow — fast turnarounds without sacrificing detail.",
+      "Whether you're tracking a full band or polishing a single, the goal is the same: make your music sound like you, at its best."
+    ],
+    "creditsTitle": "Selected credits",
+    "creditsNote": "Full portfolio and gear highlights — Phase 2.",
+    "credits": ["Artist A", "Label B", "Project C", "Album D"]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Questions, quotes, or custom projects — send a message or book directly.",
+    "metaDescription": "Get in touch or book studio time and rehearsal space.",
+    "address": "Paris, France",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "getInTouch": "Get in touch",
+    "bookStudioTitle": "Book studio time",
+    "bookStudioText": "Recording, mixing, mastering, lessons.",
+    "formNotice": "Form backend will be wired in Phase 3. Fields are placeholders for now.",
+    "serviceInterest": "Service interest",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your project…",
+    "sendMessage": "Send message",
+    "serviceOptions": {
+      "recording": "Recording",
+      "mixing": "Mixing",
+      "mastering": "Mastering",
+      "lessons": "Lessons",
+      "rehearsal": "Rehearsal space",
+      "equipment": "Equipment rental",
+      "other": "Other"
+    }
+  },
+  "booking": {
+    "engineerLabel": "Book studio time with Josh",
+    "rehearsalLabel": "Book rehearsal space",
+    "confirmation": "You'll receive a confirmation by email after booking.",
+    "placeholder": "Google Calendar embed will go here (Phase 3).",
+    "openBooking": "Open booking page"
+  }
+}

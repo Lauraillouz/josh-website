@@ -1,4 +1,5 @@
-import { siteConfig } from "@/lib/site-config";
+import type { Dictionary } from "@/lib/i18n";
+import { siteData } from "@/lib/site-data";
 
 export type EquipmentEnquiryContact = {
   name: string;
@@ -10,36 +11,38 @@ export function buildEquipmentEnquiryMailto(
   contact: EquipmentEnquiryContact,
   selectedNames: string[],
   notes: string,
+  emailCopy: Dictionary["equipment"]["mailto"],
 ): string {
   const trimmedName = contact.name.trim();
   const trimmedEmail = contact.email.trim();
   const trimmedPhone = contact.phone.trim();
+
   const lines = [
-    "Hello,",
+    emailCopy.greeting,
     "",
-    "I would like to enquire about renting the following equipment:",
+    emailCopy.intro,
     "",
     ...selectedNames.map((name) => `- ${name}`),
     "",
-    "My details:",
-    `Name: ${trimmedName}`,
-    `Email: ${trimmedEmail}`,
-    `Phone: ${trimmedPhone}`,
+    emailCopy.myDetails,
+    `${emailCopy.nameLabel} ${trimmedName}`,
+    `${emailCopy.emailLabel} ${trimmedEmail}`,
+    `${emailCopy.phoneLabel} ${trimmedPhone}`,
     "",
-    "Dates needed:",
+    emailCopy.datesNeeded,
     "",
   ];
 
   if (notes.trim()) {
-    lines.push("Additional details:", notes.trim(), "");
+    lines.push(emailCopy.additionalDetails, notes.trim(), "");
   }
 
-  lines.push(`Thank you,`, trimmedName);
+  lines.push(emailCopy.thankYou, trimmedName);
 
   const params = new URLSearchParams({
-    subject: `Equipment rental enquiry — ${trimmedName}`,
+    subject: emailCopy.subject.replace("{name}", trimmedName),
     body: lines.join("\n"),
   });
 
-  return `mailto:${siteConfig.contact.email}?${params.toString()}`;
+  return `mailto:${siteData.contact.email}?${params.toString()}`;
 }

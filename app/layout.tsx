@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { siteConfig } from "@/lib/site-config";
+import en from "@/messages/en.json";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,11 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s · ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
+  title: en.meta.siteName,
 };
 
 export default function RootLayout({
@@ -29,14 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-background text-foreground">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
